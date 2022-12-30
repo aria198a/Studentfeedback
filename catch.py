@@ -1,5 +1,5 @@
 from selenium import webdriver
-import time
+from time import sleep
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -19,9 +19,9 @@ driver.maximize_window()
 
 driver.get("https://tixcraft.com/login") # 到登入頁面
 
-driver.find_element_by_id('memId').send_keys('帳號') # 輸入帳號
-driver.find_element_by_id('passwd').send_keys('密碼') # 輸入密碼
-driver.find_element_by_class_name('login').click()
+driver.find_element('memId').send_keys('帳號') # 輸入帳號
+driver.find_element('passwd').send_keys('密碼') # 輸入密碼
+driver.find_element('login').click()
 
 driver.get("https://tixcraft.com/login")
 #driver.get("https://tixcraft.com/login")
